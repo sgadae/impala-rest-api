@@ -14,6 +14,6 @@ RUN pip install -r /code/requirements.txt
 WORKDIR /code
 
 # Run that shit
-CMD ["gunicorn", "wsgi:app", "-b", "0.0.0.0:5000"]
+CMD ["gunicorn", "wsgi:app", "-b", "0.0.0.0:21050"]
 
-EXPOSE 5000
+EXPOSE 21050
