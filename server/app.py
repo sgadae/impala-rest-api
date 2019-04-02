@@ -23,7 +23,7 @@ def create_app():
     init_config(application)
     CORS(application)
     print "Connecting to Impala on {0}:{1}".format(
-        application.config['IMPALA_HOST'], application.config['IMPALA_PORT'])
+        application.config['IMPALA_HOST'], application.config['IMPALA_PORT'], application.config['SECURITY_TOKEN'])
     return application
 
 app = create_app()
