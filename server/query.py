@@ -10,7 +10,7 @@ def query_impala(sql):
 
 
 def query_impala_cursor(sql, params=None):
-    conn = connect(host=current_app.config['IMPALA_HOST'], port=current_app.config['IMPALA_PORT'])
+    conn = connect(host=current_app.config['IMPALA_HOST'], port=current_app.config['IMPALA_PORT'],SECURITY_TOKEN=current_app.config['SECURITY_TOKEN'])
     cursor = conn.cursor()
     cursor.execute(sql.encode('utf-8'), params)
     return cursor
